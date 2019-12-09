@@ -1,0 +1,1009 @@
+{
+  "info": {
+    "_postman_id": "8ec19050-2c5a-41ed-9b9e-bf03471933cf",
+    "name": "final exam",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "userId = 12, photo = 2.png NOT FOUND",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "6fb8847a-e5fd-4948-8f30-e95d8c02b822",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "tests[\"Response code is 404\"] = responseBody.has(\"404\");",
+              "tests[\"Response message is Photo not found\"] = responseBody.has(\"Photo not found\");"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8081/photo/user-12/2.png",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "photo",
+            "user-12",
+            "2.png"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "userId = 12, photo = 2.png OK",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "5a41ca5b-0556-4bd4-86f9-cebb624cd754",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "tests[\"Response code is 200\"] = responseBody.has(\"200\");",
+              "tests[\"Response message is OK\"] = responseBody.has(\"OK\");"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "photoUpload",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "localhost:8081/photo/user-12",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "photo",
+            "user-12"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "userId = 12, photo = 2.png OK",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "6fb8847a-e5fd-4948-8f30-e95d8c02b822",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "tests[\"Response code is 200\"] = responseBody.has(\"200\");",
+              "tests[\"Response message has amazonaws\"] = responseBody.has(\"amazonaws\");",
+              "tests[\"Response message has user-12\"] = responseBody.has(\"user-12\");",
+              "tests[\"Response message has 2.png\"] = responseBody.has(\"2.png\");"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8081/photo/user-12/2.png",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "photo",
+            "user-12",
+            "2.png"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "userId = 12, photo = 2.png CONFLICT",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "5a41ca5b-0556-4bd4-86f9-cebb624cd754",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "tests[\"Response code is 409\"] = responseBody.has(\"409\");",
+              "tests[\"Response message is Such file already exists\"] = responseBody.has(\"Such file already exists\");"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "photoUpload",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "localhost:8081/photo/user-12",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "photo",
+            "user-12"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "userId = 12, photo = 2.png OK",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "6fb8847a-e5fd-4948-8f30-e95d8c02b822",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "tests[\"Response code is 200\"] = responseBody.has(\"200\");",
+              "tests[\"Response message has amazonaws\"] = responseBody.has(\"amazonaws\");",
+              "tests[\"Response message has user-12\"] = responseBody.has(\"user-12\");",
+              "tests[\"Response message has 2.png\"] = responseBody.has(\"2.png\");"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8081/photo/user-12/2.png",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "photo",
+            "user-12",
+            "2.png"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "userId = 397, photo = 2.png NOT FOUND",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "6fb8847a-e5fd-4948-8f30-e95d8c02b822",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "tests[\"Response code is 404\"] = responseBody.has(\"404\");",
+              "tests[\"Response message is Photo not found\"] = responseBody.has(\"Photo not found\");"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8081/photo/user-397/2.png",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "photo",
+            "user-397",
+            "2.png"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "userId = 397, photo = 2.png OK",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "5a41ca5b-0556-4bd4-86f9-cebb624cd754",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "tests[\"Response code is 200\"] = responseBody.has(\"200\");",
+              "tests[\"Response message is OK\"] = responseBody.has(\"OK\");"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "photoUpload",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "localhost:8081/photo/user-397",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "photo",
+            "user-397"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "userId = 397, photo = 2.png OK",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "6fb8847a-e5fd-4948-8f30-e95d8c02b822",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "tests[\"Response code is 200\"] = responseBody.has(\"200\");",
+              "tests[\"Response message has amazonaws\"] = responseBody.has(\"amazonaws\");",
+              "tests[\"Response message has user-397\"] = responseBody.has(\"user-397\");",
+              "tests[\"Response message has 2.png\"] = responseBody.has(\"2.png\");"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8081/photo/user-397/2.png",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "photo",
+            "user-397",
+            "2.png"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "userId = 397, photo = 2.png CONFLICT",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "5a41ca5b-0556-4bd4-86f9-cebb624cd754",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "tests[\"Response code is 409\"] = responseBody.has(\"409\");",
+              "tests[\"Response message is Such file already exists\"] = responseBody.has(\"Such file already exists\");"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "photoUpload",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "localhost:8081/photo/user-397",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "photo",
+            "user-397"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "userId = 397, photo = 5.jpg NOT FOUND",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "6fb8847a-e5fd-4948-8f30-e95d8c02b822",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "tests[\"Response code is 404\"] = responseBody.has(\"404\");",
+              "tests[\"Response message is Photo not found\"] = responseBody.has(\"Photo not found\");"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8081/photo/user-397/5.jpg",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "photo",
+            "user-397",
+            "5.jpg"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "userId = 397, photo = 5.jpg OK",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "5a41ca5b-0556-4bd4-86f9-cebb624cd754",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "tests[\"Response code is 200\"] = responseBody.has(\"200\");",
+              "tests[\"Response message is OK\"] = responseBody.has(\"OK\");"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "photoUpload",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "localhost:8081/photo/user-397",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "photo",
+            "user-397"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "userId = 397, photo = 5.jpg OK",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "6fb8847a-e5fd-4948-8f30-e95d8c02b822",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "tests[\"Response code is 200\"] = responseBody.has(\"200\");",
+              "tests[\"Response message has amazonaws\"] = responseBody.has(\"amazonaws\");",
+              "tests[\"Response message has user-397\"] = responseBody.has(\"user-397\");",
+              "tests[\"Response message has 5.jpg\"] = responseBody.has(\"5.jpg\");"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8081/photo/user-397/5.jpg",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "photo",
+            "user-397",
+            "5.jpg"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "userId = 397, photo = 5.jpg CONFLICT",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "5a41ca5b-0556-4bd4-86f9-cebb624cd754",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "tests[\"Response code is 409\"] = responseBody.has(\"409\");",
+              "tests[\"Response message is Such file already exists\"] = responseBody.has(\"Such file already exists\");"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "photoUpload",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "localhost:8081/photo/user-397",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "photo",
+            "user-397"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "userId = 397, photo = 1.jpg NOT FOUND",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "6fb8847a-e5fd-4948-8f30-e95d8c02b822",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "tests[\"Response code is 404\"] = responseBody.has(\"404\");",
+              "tests[\"Response message is Photo not found\"] = responseBody.has(\"Photo not found\");"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8081/photo/user-397/1.jpg",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "photo",
+            "user-397",
+            "1.jpg"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "userId = 397, photo = 1.jpg",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "5a41ca5b-0556-4bd4-86f9-cebb624cd754",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "tests[\"Response code is 200\"] = responseBody.has(\"200\");",
+              "tests[\"Response message is OK\"] = responseBody.has(\"OK\");"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "photoUpload",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "localhost:8081/photo/user-397",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "photo",
+            "user-397"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "userId = 397, photo = 1.jpg OK",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "6fb8847a-e5fd-4948-8f30-e95d8c02b822",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "tests[\"Response code is 200\"] = responseBody.has(\"200\");",
+              "tests[\"Response message has amazonaws\"] = responseBody.has(\"amazonaws\");",
+              "tests[\"Response message has user-397\"] = responseBody.has(\"user-397\");",
+              "tests[\"Response message has 1.jpg\"] = responseBody.has(\"1.jpg\");"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8081/photo/user-397/1.jpg",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "photo",
+            "user-397",
+            "1.jpg"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "userId = 397, photo = 1.jpg CONFLICT",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "5a41ca5b-0556-4bd4-86f9-cebb624cd754",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "tests[\"Response code is 409\"] = responseBody.has(\"409\");",
+              "tests[\"Response message is Such file already exists\"] = responseBody.has(\"Such file already exists\");"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "photoUpload",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "localhost:8081/photo/user-397",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "photo",
+            "user-397"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "userId = 12, photo = 6.png NOT FOUND",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "6fb8847a-e5fd-4948-8f30-e95d8c02b822",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "tests[\"Response code is 404\"] = responseBody.has(\"404\");",
+              "tests[\"Response has a message Photo not found\"] = responseBody.has(\"Photo not found\")"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8081/photo/user-12/6.png",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "photo",
+            "user-12",
+            "6.png"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "userId = 12, photo = 2.png OK",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "6fb8847a-e5fd-4948-8f30-e95d8c02b822",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "tests[\"Response code is 200\"] = responseBody.has(\"200\");",
+              "tests[\"Response has a message OK\"] = responseBody.has(\"OK\")"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8081/photo/user-12/2.png",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "photo",
+            "user-12",
+            "2.png"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "userId = 12, photo = 2.png NOT FOUND",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "6fb8847a-e5fd-4948-8f30-e95d8c02b822",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "tests[\"Response code is 404\"] = responseBody.has(\"404\");",
+              "tests[\"Response message is Photo not found\"] = responseBody.has(\"Photo not found\");"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8081/photo/user-12/2.png",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "photo",
+            "user-12",
+            "2.png"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "userId = 397, photo = 2.png OK",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "6fb8847a-e5fd-4948-8f30-e95d8c02b822",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "tests[\"Response code is 200\"] = responseBody.has(\"200\");",
+              "tests[\"Response has a message OK\"] = responseBody.has(\"OK\")"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8081/photo/user-397/2.png",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "photo",
+            "user-397",
+            "2.png"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "userId = 397, photo = 5.jpg OK",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "6fb8847a-e5fd-4948-8f30-e95d8c02b822",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "tests[\"Response code is 200\"] = responseBody.has(\"200\");",
+              "tests[\"Response has a message OK\"] = responseBody.has(\"OK\")"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8081/photo/user-397/5.jpg",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "photo",
+            "user-397",
+            "5.jpg"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "userId = 397, photo = 1.jpg OK",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "6fb8847a-e5fd-4948-8f30-e95d8c02b822",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "tests[\"Response code is 200\"] = responseBody.has(\"200\");",
+              "tests[\"Response has a message OK\"] = responseBody.has(\"OK\")"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8081/photo/user-397/1.jpg",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "photo",
+            "user-397",
+            "1.jpg"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "userId = 397, photo = 5.jpg NOT FOUND",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "6fb8847a-e5fd-4948-8f30-e95d8c02b822",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "tests[\"Response code is 404\"] = responseBody.has(\"404\");",
+              "tests[\"Response message is Photo not found\"] = responseBody.has(\"Photo not found\");"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8081/photo/user-397/5.jpg",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "photo",
+            "user-397",
+            "5.jpg"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "userId = 397, photo = 1.jpg NOT FOUND",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "6fb8847a-e5fd-4948-8f30-e95d8c02b822",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "tests[\"Response code is 404\"] = responseBody.has(\"404\");",
+              "tests[\"Response message is Photo not found\"] = responseBody.has(\"Photo not found\");"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8081/photo/user-397/1.jpg",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "photo",
+            "user-397",
+            "1.jpg"
+          ]
+        }
+      },
+      "response": []
+    }
+    ]
+}
